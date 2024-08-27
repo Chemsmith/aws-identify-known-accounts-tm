@@ -41,7 +41,7 @@
           replacementElement.setAttribute("data-tampered", "true");
           replacementElement.innerHTML = text.replace(
             accountId,
-            (match) => `<span style="background-color:${backgroundColor || DEFAULT_BACKGROUND_COLOR};color:${textColor || DEFAULT_TEXT_COLOR};padding-left:0.25em;padding-right:0.25em;border-radius:0.25em">${match}(${accountName})</span>`
+            (match) => `<span style="background-color:${backgroundColor || DEFAULT_BACKGROUND_COLOR};color:${textColor || DEFAULT_TEXT_COLOR};padding-left:0.25em;padding-right:0.25em;border-radius:0.25em"><dfn title="${accountName}">${match}</dfn></span>`
           );
           // Replace text node with span node
           element.parentNode.replaceChild(replacementElement, element);
